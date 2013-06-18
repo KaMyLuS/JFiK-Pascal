@@ -1,0 +1,47 @@
+Jednak bêdzie to kompilowane pod gcc, bo z Visualem mog¹ byæ wiêksze jaja.
+Ale Tobie to nie wp³ynie w ¿aden sposób na GUI.
+
+Plik mpir.dll jest wa¿ny, bo dziêki niemu dzia³a szyfrowanie.
+
+-----------------
+
+Na obecn¹ chwilê chwilê widzê nastêpuj¹ce tryby uruchomienia aplikacji:
+(opcje w [] s¹ opcjonalne, in_file - plik wejsciowy, out_file - wyjsciowy,
+pub_key - plik z kluczem publicznym RSA, priv_key - plik z kluczem prywatnym)
+
+1. pascal.exe [-s -p] in_file -ch out_file
+Kompresja in_file do out_file przy pomocy algo Huffmana 
++ ewentualne skanowanie/parsowanie.
+
+2. pascal.exe [-s -p] in_file -clz out_file
+Kompresja in_file do out_file przy pomocy algo LZ 
++ ewentualne skanowanie/parsowanie.
+
+3. pascal.exe in_file -dco out_file
+Dekompresja in_file do out_file.
+
+4. pascal.exe [-s -p] in_file -enc out_file pub_key
+Szyfrowanie in_file do out_file z wykorzystaniem pub_key
++ ewentualne skanowanie/parsowanie.
+
+5. pascal.exe in_file -dec out_file priv_key
+Szyfrowanie in_file do out_file z wykorzystaniem priv_key.
+
+6. pascal.exe -gen pub_key priv_key len
+Generowanie kluczy do pub_key i priv_key o dlugosci len bitow.
+
+Zauwa¿my, ¿e parsowanie wymaga skanowania, zatem nie trzeba pisaæ -s -p, 
+wystarczy wtedy tylko -p.
+
+------------------
+
+Co (raczej :p) dzia³a na obecn¹ chwilê?
+
+-> Wszystko poza skanowaniem i parsowaniem :D Czyli mo¿na kompresowaæ, 
+szyfrowaæ, itp. co tylko chcesz, ale na razie nie da siê sprawdziæ poprawnoœci
+sk³adni Pascala. 
+-> 'Interfejs' w miarê idiotoodporny, tzn. wy³apuje jak jakiœ plik nie istnieje
+albo ktoœ pochrzani parametry.
+
+Dziœ (19.06) bêdê coœ cin¹³ z flexa/bisona, ile siê uda to tyle bêdzie, to tyle 
+mu siê poka¿e w czw. o 9:00. A resztê siê doniesie.
