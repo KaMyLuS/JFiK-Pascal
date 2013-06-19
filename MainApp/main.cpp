@@ -3,6 +3,8 @@
 #include <queue>
 #include <vector>
 
+#include "pascal_driver.hpp"
+
 #include "gen_key.h"
 #include "codec.h"
 #include "key.h"
@@ -13,8 +15,6 @@
 #include "File.h"
 #include "quicklz.h"
 
-using namespace std;
-
 int key_len = 64, files_count, sum;
 string file_names[10];
 
@@ -23,7 +23,6 @@ bool parse_res = 1;
 
 int main(int argc, char *argv[])
 {
-	priority_queue<int> x;
 	// wczytywanie i analiza parametrow
 	if(argc > 1 && argc < 8)
 	{
@@ -146,11 +145,13 @@ int main(int argc, char *argv[])
 	
 	if(parse)
 	{
-
+		Pascal::Pascal_Driver driver;
+		parse_res = driver.parse(file_names[0].c_str());
 	}
 	else if(scan)
 	{
-	
+		Pascal::Pascal_Driver driver;
+		parse_res = driver.scan(file_names[0].c_str());
 	}
 	
 	if(parse_res)

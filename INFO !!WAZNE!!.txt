@@ -25,7 +25,7 @@ Szyfrowanie in_file do out_file z wykorzystaniem pub_key
 + ewentualne skanowanie/parsowanie.
 
 5. pascal.exe in_file -dec out_file priv_key
-Szyfrowanie in_file do out_file z wykorzystaniem priv_key.
+Deszyfrowanie in_file do out_file z wykorzystaniem priv_key.
 
 6. pascal.exe -gen pub_key priv_key len
 Generowanie kluczy do pub_key i priv_key o dlugosci len bitow.

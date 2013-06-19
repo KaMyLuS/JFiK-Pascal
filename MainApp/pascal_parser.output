@@ -1,0 +1,157 @@
+Terminals unused in grammar
+
+   PROGRAM_P
+   PROCED_P
+   FUNCTION_P
+   BEGIN_P
+   END_P
+   FOR_P
+   WHILE_P
+   TO_P
+   DOWNTO_P
+   DO_P
+   IF_P
+   THEN_P
+   ELSE_P
+   REPEAT_P
+   UNTIL_P
+   NUMBER
+   REAL_NR
+   IDENT
+   STRING
+   VAR_P
+   CONST_P
+   INT_P
+   REAL_P
+   STRING_P
+   BOOL_P
+   TRUE_P
+   FALSE_P
+   ARRAY_P
+   OF_P
+   BIND
+   COMMA
+   SCOLON
+   DOT
+   COLON
+   EQUAL
+   NOTEQ
+   GT
+   GE
+   LT
+   LE
+   PLUS
+   MINUS
+   SLASH
+   STAR
+   DIV_P
+   MOD_P
+   LPAREN
+   RPAREN
+   NOT_P
+   AND_P
+   OR_P
+   WRONG
+
+
+Grammar
+
+    0 $accept: program "end of file"
+
+    1 program: "end of file"
+
+
+Terminals, with rules where they appear
+
+"end of file" (0) 0 1
+error (256)
+PROGRAM_P (258)
+PROCED_P (259)
+FUNCTION_P (260)
+BEGIN_P (261)
+END_P (262)
+FOR_P (263)
+WHILE_P (264)
+TO_P (265)
+DOWNTO_P (266)
+DO_P (267)
+IF_P (268)
+THEN_P (269)
+ELSE_P (270)
+REPEAT_P (271)
+UNTIL_P (272)
+NUMBER (273)
+REAL_NR (274)
+IDENT (275)
+STRING (276)
+VAR_P (277)
+CONST_P (278)
+INT_P (279)
+REAL_P (280)
+STRING_P (281)
+BOOL_P (282)
+TRUE_P (283)
+FALSE_P (284)
+ARRAY_P (285)
+OF_P (286)
+BIND (287)
+COMMA (288)
+SCOLON (289)
+DOT (290)
+COLON (291)
+EQUAL (292)
+NOTEQ (293)
+GT (294)
+GE (295)
+LT (296)
+LE (297)
+PLUS (298)
+MINUS (299)
+SLASH (300)
+STAR (301)
+DIV_P (302)
+MOD_P (303)
+LPAREN (304)
+RPAREN (305)
+NOT_P (306)
+AND_P (307)
+OR_P (308)
+WRONG (309)
+
+
+Nonterminals, with rules where they appear
+
+$accept (55)
+    on left: 0
+program (56)
+    on left: 1, on right: 0
+
+
+State 0
+
+    0 $accept: . program "end of file"
+
+    "end of file"  shift, and go to state 1
+
+    program  go to state 2
+
+
+State 1
+
+    1 program: "end of file" .
+
+    $default  reduce using rule 1 (program)
+
+
+State 2
+
+    0 $accept: program . "end of file"
+
+    "end of file"  shift, and go to state 3
+
+
+State 3
+
+    0 $accept: program "end of file" .
+
+    $default  accept

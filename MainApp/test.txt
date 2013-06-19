@@ -1,0 +1,10 @@
+program
+
+begin
+
+function xyz(integer x)
+begin
+  string s = 'asdhsajds';
+  5=2+3;
+end
+end.
