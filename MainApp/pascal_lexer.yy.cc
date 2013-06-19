@@ -974,7 +974,7 @@ case 1:
 YY_RULE_SETUP
 #line 35 "pascal_lexer.l"
 { 
-			   std::cout << "program, linia: " << yylineno << std::endl;
+			   //std::cout << "program, linia: " << yylineno << std::endl;
                return(token::PROGRAM_P);  
             }
 	YY_BREAK
@@ -982,7 +982,7 @@ case 2:
 YY_RULE_SETUP
 #line 39 "pascal_lexer.l"
 { 
-			   std::cout << "procedure, linia: " << yylineno << std::endl;
+			   //std::cout << "procedure, linia: " << yylineno << std::endl;
                return(token::PROCED_P);  
             }
 	YY_BREAK
@@ -990,7 +990,7 @@ case 3:
 YY_RULE_SETUP
 #line 43 "pascal_lexer.l"
 { 
-			   std::cout << "function, linia: " << yylineno << std::endl;
+			   //std::cout << "function, linia: " << yylineno << std::endl;
                return(token::FUNCTION_P);  
             }
 	YY_BREAK
@@ -998,7 +998,7 @@ case 4:
 YY_RULE_SETUP
 #line 47 "pascal_lexer.l"
 { 
-			   std::cout << "begin, linia: " << yylineno << std::endl;
+			   //std::cout << "begin, linia: " << yylineno << std::endl;
                return(token::BEGIN_P);  
             }
 	YY_BREAK
@@ -1006,7 +1006,7 @@ case 5:
 YY_RULE_SETUP
 #line 51 "pascal_lexer.l"
 { 
-			   std::cout << "end, linia: " << yylineno << std::endl;
+			   //std::cout << "end, linia: " << yylineno << std::endl;
                return(token::END_P);  
             }
 	YY_BREAK
@@ -1014,7 +1014,7 @@ case 6:
 YY_RULE_SETUP
 #line 55 "pascal_lexer.l"
 { 
-			   std::cout << "for, linia: " << yylineno << std::endl;
+			   //std::cout << "for, linia: " << yylineno << std::endl;
                return(token::FOR_P);  
             }
 	YY_BREAK
@@ -1022,7 +1022,7 @@ case 7:
 YY_RULE_SETUP
 #line 59 "pascal_lexer.l"
 { 
-			   std::cout << "while, linia: " << yylineno << std::endl;
+			   //std::cout << "while, linia: " << yylineno << std::endl;
                return(token::WHILE_P);  
             }
 	YY_BREAK
@@ -1030,7 +1030,7 @@ case 8:
 YY_RULE_SETUP
 #line 63 "pascal_lexer.l"
 { 
-			   std::cout << "to, linia: " << yylineno << std::endl;
+			   //std::cout << "to, linia: " << yylineno << std::endl;
                return(token::TO_P);  
             }
 	YY_BREAK
@@ -1038,7 +1038,7 @@ case 9:
 YY_RULE_SETUP
 #line 67 "pascal_lexer.l"
 { 
-			   std::cout << "downto, linia: " << yylineno << std::endl;
+			   //std::cout << "downto, linia: " << yylineno << std::endl;
                return(token::DOWNTO_P);  
             }
 	YY_BREAK
@@ -1046,7 +1046,7 @@ case 10:
 YY_RULE_SETUP
 #line 71 "pascal_lexer.l"
 { 
-			   std::cout << "do, linia: " << yylineno << std::endl;
+			   //std::cout << "do, linia: " << yylineno << std::endl;
                return(token::DO_P);  
             }
 	YY_BREAK
@@ -1054,7 +1054,7 @@ case 11:
 YY_RULE_SETUP
 #line 75 "pascal_lexer.l"
 { 
-			   std::cout << "if, linia: " << yylineno << std::endl;
+			   //std::cout << "if, linia: " << yylineno << std::endl;
                return(token::IF_P);  
             }
 	YY_BREAK
@@ -1062,7 +1062,7 @@ case 12:
 YY_RULE_SETUP
 #line 79 "pascal_lexer.l"
 { 
-			   std::cout << "then, linia: " << yylineno << std::endl;
+			   //std::cout << "then, linia: " << yylineno << std::endl;
                return(token::THEN_P);  
             }
 	YY_BREAK
@@ -1070,7 +1070,7 @@ case 13:
 YY_RULE_SETUP
 #line 83 "pascal_lexer.l"
 { 
-			   std::cout << "else, linia: " << yylineno << std::endl;
+			   //std::cout << "else, linia: " << yylineno << std::endl;
                return(token::ELSE_P);  
             }
 	YY_BREAK
@@ -1078,7 +1078,7 @@ case 14:
 YY_RULE_SETUP
 #line 87 "pascal_lexer.l"
 { 
-			   std::cout << "repeat, linia: " << yylineno << std::endl;
+			   //std::cout << "repeat, linia: " << yylineno << std::endl;
                return(token::REPEAT_P);  
             }
 	YY_BREAK
@@ -1086,7 +1086,7 @@ case 15:
 YY_RULE_SETUP
 #line 91 "pascal_lexer.l"
 { 
-			   std::cout << "until, linia: " << yylineno << std::endl;
+			   //std::cout << "until, linia: " << yylineno << std::endl;
                return(token::UNTIL_P);  
             }
 	YY_BREAK
@@ -1095,7 +1095,7 @@ YY_RULE_SETUP
 #line 96 "pascal_lexer.l"
 { 
 				yylval->sval = STOKEN(yytext); 
-				std::cout << "number, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
+				//std::cout << "number, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
 				return(token::NUMBER);  
             }
 	YY_BREAK
@@ -1104,7 +1104,7 @@ YY_RULE_SETUP
 #line 101 "pascal_lexer.l"
 { 
 				yylval->sval = STOKEN(yytext); 
-				std::cout << "real number, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
+				//std::cout << "real number, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
 				return(token::REAL_NR);  
             }
 	YY_BREAK
@@ -1112,7 +1112,7 @@ case 18:
 YY_RULE_SETUP
 #line 106 "pascal_lexer.l"
 { 
-			   std::cout << "var, linia: " << yylineno << std::endl;
+			   //std::cout << "var, linia: " << yylineno << std::endl;
                return(token::VAR_P);  
             }
 	YY_BREAK
@@ -1120,7 +1120,7 @@ case 19:
 YY_RULE_SETUP
 #line 110 "pascal_lexer.l"
 { 
-			   std::cout << "const, linia: " << yylineno << std::endl;
+			   //std::cout << "const, linia: " << yylineno << std::endl;
                return(token::CONST_P);  
             }
 	YY_BREAK
@@ -1128,7 +1128,7 @@ case 20:
 YY_RULE_SETUP
 #line 114 "pascal_lexer.l"
 { 
-			   std::cout << "integer, linia: " << yylineno << std::endl;
+			   //std::cout << "integer, linia: " << yylineno << std::endl;
                return(token::INT_P);  
             }
 	YY_BREAK
@@ -1136,7 +1136,7 @@ case 21:
 YY_RULE_SETUP
 #line 118 "pascal_lexer.l"
 { 
-			   std::cout << "real, linia: " << yylineno << std::endl;
+			   //std::cout << "real, linia: " << yylineno << std::endl;
                return(token::REAL_P);  
             }
 	YY_BREAK
@@ -1144,7 +1144,7 @@ case 22:
 YY_RULE_SETUP
 #line 122 "pascal_lexer.l"
 { 
-			   std::cout << "string_p, linia: " << yylineno << std::endl;
+			   //std::cout << "string_p, linia: " << yylineno << std::endl;
                return(token::STRING_P);  
             }
 	YY_BREAK
@@ -1152,7 +1152,7 @@ case 23:
 YY_RULE_SETUP
 #line 126 "pascal_lexer.l"
 { 
-			   std::cout << "boolean, linia: " << yylineno << std::endl;
+			   //std::cout << "boolean, linia: " << yylineno << std::endl;
                return(token::BOOL_P);  
             }	
 	YY_BREAK
@@ -1160,7 +1160,7 @@ case 24:
 YY_RULE_SETUP
 #line 130 "pascal_lexer.l"
 { 
-			   std::cout << "true, linia: " << yylineno << std::endl;
+			   //std::cout << "true, linia: " << yylineno << std::endl;
                return(token::TRUE_P);  
             }	
 	YY_BREAK
@@ -1168,7 +1168,7 @@ case 25:
 YY_RULE_SETUP
 #line 134 "pascal_lexer.l"
 { 
-			   std::cout << "false, linia: " << yylineno << std::endl;
+			   //std::cout << "false, linia: " << yylineno << std::endl;
                return(token::FALSE_P);  
             }		
 	YY_BREAK
@@ -1176,7 +1176,7 @@ case 26:
 YY_RULE_SETUP
 #line 138 "pascal_lexer.l"
 { 
-			   std::cout << "array, linia: " << yylineno << std::endl;
+			   //std::cout << "array, linia: " << yylineno << std::endl;
                return(token::ARRAY_P);  
             }	
 	YY_BREAK
@@ -1184,7 +1184,7 @@ case 27:
 YY_RULE_SETUP
 #line 142 "pascal_lexer.l"
 { 
-			   std::cout << "of, linia: " << yylineno << std::endl;
+			   //std::cout << "of, linia: " << yylineno << std::endl;
                return(token::OF_P);  
             }	
 	YY_BREAK
@@ -1192,7 +1192,7 @@ case 28:
 YY_RULE_SETUP
 #line 147 "pascal_lexer.l"
 { 
-			   std::cout << ":=, linia: " << yylineno << std::endl;
+			   //std::cout << ":=, linia: " << yylineno << std::endl;
                return(token::BIND);  
             }			
 	YY_BREAK
@@ -1200,7 +1200,7 @@ case 29:
 YY_RULE_SETUP
 #line 151 "pascal_lexer.l"
 { 
-			   std::cout << "comma, linia: " << yylineno << std::endl;
+			   //std::cout << "comma, linia: " << yylineno << std::endl;
                return(token::COMMA);  
             }	
 	YY_BREAK
@@ -1208,7 +1208,7 @@ case 30:
 YY_RULE_SETUP
 #line 155 "pascal_lexer.l"
 { 
-			   std::cout << "scolon, linia: " << yylineno << std::endl;
+			   //std::cout << "scolon, linia: " << yylineno << std::endl;
                return(token::SCOLON);  
             }	
 	YY_BREAK
@@ -1216,7 +1216,7 @@ case 31:
 YY_RULE_SETUP
 #line 159 "pascal_lexer.l"
 { 
-			   std::cout << "dot, linia: " << yylineno << std::endl;
+			   //std::cout << "dot, linia: " << yylineno << std::endl;
                return(token::DOT);  
             }	
 	YY_BREAK
@@ -1224,7 +1224,7 @@ case 32:
 YY_RULE_SETUP
 #line 163 "pascal_lexer.l"
 { 
-			   std::cout << "colon, linia: " << yylineno << std::endl;
+			   //std::cout << "colon, linia: " << yylineno << std::endl;
                return(token::COLON);  
             }	
 	YY_BREAK
@@ -1232,7 +1232,7 @@ case 33:
 YY_RULE_SETUP
 #line 167 "pascal_lexer.l"
 { 
-			   std::cout << "=, linia: " << yylineno << std::endl;
+			   //std::cout << "=, linia: " << yylineno << std::endl;
                return(token::EQUAL);  
             }
 	YY_BREAK
@@ -1240,7 +1240,7 @@ case 34:
 YY_RULE_SETUP
 #line 171 "pascal_lexer.l"
 { 
-			   std::cout << "<>, linia: " << yylineno << std::endl;
+			   //std::cout << "<>, linia: " << yylineno << std::endl;
                return(token::NOTEQ);  
             }			
 	YY_BREAK
@@ -1248,7 +1248,7 @@ case 35:
 YY_RULE_SETUP
 #line 175 "pascal_lexer.l"
 { 
-			   std::cout << ">, linia: " << yylineno << std::endl;
+			   //std::cout << ">, linia: " << yylineno << std::endl;
                return(token::GT);  
             }
 	YY_BREAK
@@ -1256,7 +1256,7 @@ case 36:
 YY_RULE_SETUP
 #line 179 "pascal_lexer.l"
 { 
-			   std::cout << ">=, linia: " << yylineno << std::endl;
+			   //std::cout << ">=, linia: " << yylineno << std::endl;
                return(token::GE);  
             }	
 	YY_BREAK
@@ -1264,7 +1264,7 @@ case 37:
 YY_RULE_SETUP
 #line 183 "pascal_lexer.l"
 { 
-			   std::cout << "<, linia: " << yylineno << std::endl;
+			   //std::cout << "<, linia: " << yylineno << std::endl;
                return(token::LT);  
             }		
 	YY_BREAK
@@ -1272,7 +1272,7 @@ case 38:
 YY_RULE_SETUP
 #line 187 "pascal_lexer.l"
 { 
-			   std::cout << "<=, linia: " << yylineno << std::endl;
+			   //std::cout << "<=, linia: " << yylineno << std::endl;
                return(token::LE);  
             }	
 	YY_BREAK
@@ -1280,7 +1280,7 @@ case 39:
 YY_RULE_SETUP
 #line 191 "pascal_lexer.l"
 { 
-			   std::cout << "+, linia: " << yylineno << std::endl;
+			   //std::cout << "+, linia: " << yylineno << std::endl;
                return(token::PLUS);  
             }	
 	YY_BREAK
@@ -1288,7 +1288,7 @@ case 40:
 YY_RULE_SETUP
 #line 195 "pascal_lexer.l"
 { 
-			   std::cout << "-, linia: " << yylineno << std::endl;
+			   //std::cout << "-, linia: " << yylineno << std::endl;
                return(token::MINUS);  
             }
 	YY_BREAK
@@ -1296,7 +1296,7 @@ case 41:
 YY_RULE_SETUP
 #line 199 "pascal_lexer.l"
 { 
-			   std::cout << "/, linia: " << yylineno << std::endl;
+			   //std::cout << "/, linia: " << yylineno << std::endl;
                return(token::SLASH);  
             }	
 	YY_BREAK
@@ -1304,7 +1304,7 @@ case 42:
 YY_RULE_SETUP
 #line 203 "pascal_lexer.l"
 { 
-			   std::cout << "*, linia: " << yylineno << std::endl;
+			   //std::cout << "*, linia: " << yylineno << std::endl;
                return(token::STAR);  
             }		
 	YY_BREAK
@@ -1312,7 +1312,7 @@ case 43:
 YY_RULE_SETUP
 #line 207 "pascal_lexer.l"
 { 
-			   std::cout << "div, linia: " << yylineno << std::endl;
+			   //std::cout << "div, linia: " << yylineno << std::endl;
                return(token::DIV_P);  
             }		
 	YY_BREAK
@@ -1320,7 +1320,7 @@ case 44:
 YY_RULE_SETUP
 #line 211 "pascal_lexer.l"
 { 
-			   std::cout << "mod, linia: " << yylineno << std::endl;
+			   //std::cout << "mod, linia: " << yylineno << std::endl;
                return(token::MOD_P);  
             }	
 	YY_BREAK
@@ -1328,7 +1328,7 @@ case 45:
 YY_RULE_SETUP
 #line 215 "pascal_lexer.l"
 { 
-			   std::cout << "(, linia: " << yylineno << std::endl;
+			   //std::cout << "(, linia: " << yylineno << std::endl;
                return(token::LPAREN);  
             }	
 	YY_BREAK
@@ -1336,7 +1336,7 @@ case 46:
 YY_RULE_SETUP
 #line 219 "pascal_lexer.l"
 { 
-			   std::cout << "), linia: " << yylineno << std::endl;
+			   //std::cout << "), linia: " << yylineno << std::endl;
                return(token::RPAREN);  
             }	
 	YY_BREAK
@@ -1344,7 +1344,7 @@ case 47:
 YY_RULE_SETUP
 #line 223 "pascal_lexer.l"
 { 
-			   std::cout << "not, linia: " << yylineno << std::endl;
+			   //std::cout << "not, linia: " << yylineno << std::endl;
                return(token::NOT_P);  
             }
 	YY_BREAK
@@ -1352,7 +1352,7 @@ case 48:
 YY_RULE_SETUP
 #line 227 "pascal_lexer.l"
 { 
-			   std::cout << "and, linia: " << yylineno << std::endl;
+			   //std::cout << "and, linia: " << yylineno << std::endl;
                return(token::AND_P);  
             }		
 	YY_BREAK
@@ -1360,7 +1360,7 @@ case 49:
 YY_RULE_SETUP
 #line 231 "pascal_lexer.l"
 { 
-			   std::cout << "or, linia: " << yylineno << std::endl;
+			   //std::cout << "or, linia: " << yylineno << std::endl;
                return(token::OR_P);  
             }			
 	YY_BREAK
@@ -1369,7 +1369,7 @@ YY_RULE_SETUP
 #line 237 "pascal_lexer.l"
 { 
 				yylval->sval = STOKEN(yytext); 
-				std::cout << "ident, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
+				//std::cout << "ident, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
 				return(token::IDENT);  
             }
 	YY_BREAK
@@ -1379,7 +1379,7 @@ YY_RULE_SETUP
 #line 242 "pascal_lexer.l"
 { 
 				yylval->sval = STOKEN(yytext); 
-				std::cout << "string, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
+				//std::cout << "string, linia: " << yylineno << ", wartosc: " << *(yylval->sval) << std::endl;
 				return(token::STRING);  
             }
 	YY_BREAK
@@ -1393,7 +1393,7 @@ case 53:
 YY_RULE_SETUP
 #line 249 "pascal_lexer.l"
 { 
-			   std::cout << "zly znak, linia: " << yylineno << " -> " << yytext << std::endl;
+			   std::cout << "Niewlasciwy znak: " << yytext << ", w linii: " << yylineno << std::endl;
 			   scan_passed = false;
                return(token::WRONG);  
             }
